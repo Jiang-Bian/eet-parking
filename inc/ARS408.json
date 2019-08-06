@@ -1,0 +1,5356 @@
+{
+    "messages": [
+        {
+            "attributes": {},
+            "comment": "Quality object information",
+            "dlc": 7,
+            "id": 1548,
+            "is_extended_frame": false,
+            "name": "Obj_2_Quality",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Object probability of existence",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_ProbOfExist",
+                    "offset": 0.0,
+                    "start_bit": 53,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "<=100%",
+                            "value": 7
+                        },
+                        {
+                            "name": "<99.9%",
+                            "value": 6
+                        },
+                        {
+                            "name": "<99%",
+                            "value": 5
+                        },
+                        {
+                            "name": "<90%",
+                            "value": 4
+                        },
+                        {
+                            "name": "<75%",
+                            "value": 3
+                        },
+                        {
+                            "name": "<50%",
+                            "value": 2
+                        },
+                        {
+                            "name": "<25%",
+                            "value": 1
+                        },
+                        {
+                            "name": "invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Object measurement status",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_MeasState",
+                    "offset": 0.0,
+                    "start_bit": 50,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "New from merge",
+                            "value": 5
+                        },
+                        {
+                            "name": "Deleted for merge",
+                            "value": 4
+                        },
+                        {
+                            "name": "Predicted",
+                            "value": 3
+                        },
+                        {
+                            "name": "Measured",
+                            "value": 2
+                        },
+                        {
+                            "name": "New",
+                            "value": 1
+                        },
+                        {
+                            "name": "Deleted",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 5,
+                    "comment": "Object relative longitudinal acceleration standard deviation",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_ArelLong_rms",
+                    "offset": 0.0,
+                    "start_bit": 39,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Invalid",
+                            "value": 31
+                        },
+                        {
+                            "name": "<10.000 m/s\u00b2",
+                            "value": 30
+                        },
+                        {
+                            "name": "<7.762 m/s\u00b2",
+                            "value": 29
+                        },
+                        {
+                            "name": "<6.025 m/s\u00b2",
+                            "value": 28
+                        },
+                        {
+                            "name": "<4.676 m/s\u00b2",
+                            "value": 27
+                        },
+                        {
+                            "name": "<3.630 m/s\u00b2",
+                            "value": 26
+                        },
+                        {
+                            "name": "<2.817 m/s\u00b2",
+                            "value": 25
+                        },
+                        {
+                            "name": "<2.187 m/s\u00b2",
+                            "value": 24
+                        },
+                        {
+                            "name": "<1.697 m/s\u00b2",
+                            "value": 23
+                        },
+                        {
+                            "name": "<1.317 m/s\u00b2",
+                            "value": 22
+                        },
+                        {
+                            "name": "<1.023 m/s\u00b2",
+                            "value": 21
+                        },
+                        {
+                            "name": "<0.794 m/s\u00b2",
+                            "value": 20
+                        },
+                        {
+                            "name": "<0.616 m/s\u00b2",
+                            "value": 19
+                        },
+                        {
+                            "name": "<0.478 m/s\u00b2",
+                            "value": 18
+                        },
+                        {
+                            "name": "<0.371 m/s\u00b2",
+                            "value": 17
+                        },
+                        {
+                            "name": "<0.288 m/s\u00b2",
+                            "value": 16
+                        },
+                        {
+                            "name": "<0.224 m/s\u00b2",
+                            "value": 15
+                        },
+                        {
+                            "name": "<0.174 m/s\u00b2",
+                            "value": 14
+                        },
+                        {
+                            "name": "<0.135 m/s\u00b2",
+                            "value": 13
+                        },
+                        {
+                            "name": "<0.105 m/s\u00b2",
+                            "value": 12
+                        },
+                        {
+                            "name": "<0.081 m/s\u00b2",
+                            "value": 11
+                        },
+                        {
+                            "name": "<0.063 m/s\u00b2",
+                            "value": 10
+                        },
+                        {
+                            "name": "<0.049 m/s\u00b2",
+                            "value": 9
+                        },
+                        {
+                            "name": "<0.038 m/s\u00b2",
+                            "value": 8
+                        },
+                        {
+                            "name": "<0.029 m/s\u00b2",
+                            "value": 7
+                        },
+                        {
+                            "name": "<0.023 m/s\u00b2",
+                            "value": 6
+                        },
+                        {
+                            "name": "<0.018 m/s\u00b2",
+                            "value": 5
+                        },
+                        {
+                            "name": "<0.014 m/s\u00b2",
+                            "value": 4
+                        },
+                        {
+                            "name": "<0.011 m/s\u00b2",
+                            "value": 3
+                        },
+                        {
+                            "name": "<0.008 m/s\u00b2",
+                            "value": 2
+                        },
+                        {
+                            "name": "<0.006 m/s\u00b2",
+                            "value": 1
+                        },
+                        {
+                            "name": "<0.005 m/s\u00b2",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 5,
+                    "comment": "Object relative lateral acceleration standard deviation",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_ArelLat_rms",
+                    "offset": 0.0,
+                    "start_bit": 34,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Invalid",
+                            "value": 31
+                        },
+                        {
+                            "name": "<10.000 m/s\u00b2",
+                            "value": 30
+                        },
+                        {
+                            "name": "<7.762 m/s\u00b2",
+                            "value": 29
+                        },
+                        {
+                            "name": "<6.025 m/s\u00b2",
+                            "value": 28
+                        },
+                        {
+                            "name": "<4.676 m/s\u00b2",
+                            "value": 27
+                        },
+                        {
+                            "name": "<3.630 m/s\u00b2",
+                            "value": 26
+                        },
+                        {
+                            "name": "<2.817 m/s\u00b2",
+                            "value": 25
+                        },
+                        {
+                            "name": "<2.187 m/s\u00b2",
+                            "value": 24
+                        },
+                        {
+                            "name": "<1.697 m/s\u00b2",
+                            "value": 23
+                        },
+                        {
+                            "name": "<1.317 m/s\u00b2",
+                            "value": 22
+                        },
+                        {
+                            "name": "<1.023 m/s\u00b2",
+                            "value": 21
+                        },
+                        {
+                            "name": "<0.794 m/s\u00b2",
+                            "value": 20
+                        },
+                        {
+                            "name": "<0.616 m/s\u00b2",
+                            "value": 19
+                        },
+                        {
+                            "name": "<0.478 m/s\u00b2",
+                            "value": 18
+                        },
+                        {
+                            "name": "<0.371 m/s\u00b2",
+                            "value": 17
+                        },
+                        {
+                            "name": "<0.288 m/s\u00b2",
+                            "value": 16
+                        },
+                        {
+                            "name": "<0.224 m/s\u00b2",
+                            "value": 15
+                        },
+                        {
+                            "name": "<0.174 m/s\u00b2",
+                            "value": 14
+                        },
+                        {
+                            "name": "<0.135 m/s\u00b2",
+                            "value": 13
+                        },
+                        {
+                            "name": "<0.105 m/s\u00b2",
+                            "value": 12
+                        },
+                        {
+                            "name": "<0.081 m/s\u00b2",
+                            "value": 11
+                        },
+                        {
+                            "name": "<0.063 m/s\u00b2",
+                            "value": 10
+                        },
+                        {
+                            "name": "<0.049 m/s\u00b2",
+                            "value": 9
+                        },
+                        {
+                            "name": "<0.038 m/s\u00b2",
+                            "value": 8
+                        },
+                        {
+                            "name": "<0.029 m/s\u00b2",
+                            "value": 7
+                        },
+                        {
+                            "name": "<0.023 m/s\u00b2",
+                            "value": 6
+                        },
+                        {
+                            "name": "<0.018 m/s\u00b2",
+                            "value": 5
+                        },
+                        {
+                            "name": "<0.014 m/s\u00b2",
+                            "value": 4
+                        },
+                        {
+                            "name": "<0.011 m/s\u00b2",
+                            "value": 3
+                        },
+                        {
+                            "name": "<0.008 m/s\u00b2",
+                            "value": 2
+                        },
+                        {
+                            "name": "<0.006 m/s\u00b2",
+                            "value": 1
+                        },
+                        {
+                            "name": "<0.005 m/s\u00b2",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 5,
+                    "comment": "Object relative longitudinal velocity standard deviation",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_VrelLong_rms",
+                    "offset": 0.0,
+                    "start_bit": 17,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Invalid",
+                            "value": 31
+                        },
+                        {
+                            "name": "<10.000 m/s",
+                            "value": 30
+                        },
+                        {
+                            "name": "<7.762 m/s",
+                            "value": 29
+                        },
+                        {
+                            "name": "<6.025 m/s",
+                            "value": 28
+                        },
+                        {
+                            "name": "<4.676 m/s",
+                            "value": 27
+                        },
+                        {
+                            "name": "<3.630 m/s",
+                            "value": 26
+                        },
+                        {
+                            "name": "<2.817 m/s",
+                            "value": 25
+                        },
+                        {
+                            "name": "<2.187 m/s",
+                            "value": 24
+                        },
+                        {
+                            "name": "<1.697 m/s",
+                            "value": 23
+                        },
+                        {
+                            "name": "<1.317 m/s",
+                            "value": 22
+                        },
+                        {
+                            "name": "<1.023 m/s",
+                            "value": 21
+                        },
+                        {
+                            "name": "<0.794 m/s",
+                            "value": 20
+                        },
+                        {
+                            "name": "<0.616 m/s",
+                            "value": 19
+                        },
+                        {
+                            "name": "<0.478 m/s",
+                            "value": 18
+                        },
+                        {
+                            "name": "<0.371 m/s",
+                            "value": 17
+                        },
+                        {
+                            "name": "<0.288 m/s",
+                            "value": 16
+                        },
+                        {
+                            "name": "<0.224 m/s",
+                            "value": 15
+                        },
+                        {
+                            "name": "<0.174 m/s",
+                            "value": 14
+                        },
+                        {
+                            "name": "<0.135 m/s",
+                            "value": 13
+                        },
+                        {
+                            "name": "<0.105 m/s",
+                            "value": 12
+                        },
+                        {
+                            "name": "<0.081 m/s",
+                            "value": 11
+                        },
+                        {
+                            "name": "<0.063 m/s",
+                            "value": 10
+                        },
+                        {
+                            "name": "<0.049 m/s",
+                            "value": 9
+                        },
+                        {
+                            "name": "<0.038 m/s",
+                            "value": 8
+                        },
+                        {
+                            "name": "<0.029 m/s",
+                            "value": 7
+                        },
+                        {
+                            "name": "<0.023 m/s",
+                            "value": 6
+                        },
+                        {
+                            "name": "<0.018 m/s",
+                            "value": 5
+                        },
+                        {
+                            "name": "<0.014 m/s",
+                            "value": 4
+                        },
+                        {
+                            "name": "<0.011 m/s",
+                            "value": 3
+                        },
+                        {
+                            "name": "<0.008 m/s",
+                            "value": 2
+                        },
+                        {
+                            "name": "<0.006 m/s",
+                            "value": 1
+                        },
+                        {
+                            "name": "<0.005 m/s",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 5,
+                    "comment": "Object relative lateral velocity standard deviation",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_VrelLat_rms",
+                    "offset": 0.0,
+                    "start_bit": 28,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Invalid",
+                            "value": 31
+                        },
+                        {
+                            "name": "<10.000 m/s",
+                            "value": 30
+                        },
+                        {
+                            "name": "<7.762 m/s",
+                            "value": 29
+                        },
+                        {
+                            "name": "<6.025 m/s",
+                            "value": 28
+                        },
+                        {
+                            "name": "<4.676 m/s",
+                            "value": 27
+                        },
+                        {
+                            "name": "<3.630 m/s",
+                            "value": 26
+                        },
+                        {
+                            "name": "<2.817 m/s",
+                            "value": 25
+                        },
+                        {
+                            "name": "<2.187 m/s",
+                            "value": 24
+                        },
+                        {
+                            "name": "<1.697 m/s",
+                            "value": 23
+                        },
+                        {
+                            "name": "<1.317 m/s",
+                            "value": 22
+                        },
+                        {
+                            "name": "<1.023 m/s",
+                            "value": 21
+                        },
+                        {
+                            "name": "<0.794 m/s",
+                            "value": 20
+                        },
+                        {
+                            "name": "<0.616 m/s",
+                            "value": 19
+                        },
+                        {
+                            "name": "<0.478 m/s",
+                            "value": 18
+                        },
+                        {
+                            "name": "<0.371 m/s",
+                            "value": 17
+                        },
+                        {
+                            "name": "<0.288 m/s",
+                            "value": 16
+                        },
+                        {
+                            "name": "<0.224 m/s",
+                            "value": 15
+                        },
+                        {
+                            "name": "<0.174 m/s",
+                            "value": 14
+                        },
+                        {
+                            "name": "<0.135 m/s",
+                            "value": 13
+                        },
+                        {
+                            "name": "<0.105 m/s",
+                            "value": 12
+                        },
+                        {
+                            "name": "<0.081 m/s",
+                            "value": 11
+                        },
+                        {
+                            "name": "<0.063 m/s",
+                            "value": 10
+                        },
+                        {
+                            "name": "<0.049 m/s",
+                            "value": 9
+                        },
+                        {
+                            "name": "<0.038 m/s",
+                            "value": 8
+                        },
+                        {
+                            "name": "<0.029 m/s",
+                            "value": 7
+                        },
+                        {
+                            "name": "<0.023 m/s",
+                            "value": 6
+                        },
+                        {
+                            "name": "<0.018 m/s",
+                            "value": 5
+                        },
+                        {
+                            "name": "<0.014 m/s",
+                            "value": 4
+                        },
+                        {
+                            "name": "<0.011 m/s",
+                            "value": 3
+                        },
+                        {
+                            "name": "<0.008 m/s",
+                            "value": 2
+                        },
+                        {
+                            "name": "<0.006 m/s",
+                            "value": 1
+                        },
+                        {
+                            "name": "<0.005 m/s",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 5,
+                    "comment": "Object orientation angle",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_Orientation_rms",
+                    "offset": 0.0,
+                    "start_bit": 45,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Invalid",
+                            "value": 31
+                        },
+                        {
+                            "name": "<180.000 deg",
+                            "value": 30
+                        },
+                        {
+                            "name": "<126.881 deg",
+                            "value": 29
+                        },
+                        {
+                            "name": "<89.437 deg",
+                            "value": 28
+                        },
+                        {
+                            "name": "<63.044 deg",
+                            "value": 27
+                        },
+                        {
+                            "name": "<44.439 deg",
+                            "value": 26
+                        },
+                        {
+                            "name": "<31.325 deg",
+                            "value": 25
+                        },
+                        {
+                            "name": "<22.081 deg",
+                            "value": 24
+                        },
+                        {
+                            "name": "<15.565 deg",
+                            "value": 23
+                        },
+                        {
+                            "name": "<10.971 deg",
+                            "value": 22
+                        },
+                        {
+                            "name": "<7.734 deg",
+                            "value": 21
+                        },
+                        {
+                            "name": "<5.451 deg",
+                            "value": 20
+                        },
+                        {
+                            "name": "<3.843 deg",
+                            "value": 19
+                        },
+                        {
+                            "name": "<2.709 deg",
+                            "value": 18
+                        },
+                        {
+                            "name": "<1.909 deg",
+                            "value": 17
+                        },
+                        {
+                            "name": "<1.346 deg",
+                            "value": 16
+                        },
+                        {
+                            "name": "<0.949 deg",
+                            "value": 15
+                        },
+                        {
+                            "name": "<0.669 deg",
+                            "value": 14
+                        },
+                        {
+                            "name": "<0.471 deg",
+                            "value": 13
+                        },
+                        {
+                            "name": "<0.332 deg",
+                            "value": 12
+                        },
+                        {
+                            "name": "<0.234 deg",
+                            "value": 11
+                        },
+                        {
+                            "name": "<0.165 deg",
+                            "value": 10
+                        },
+                        {
+                            "name": "<0.116 deg",
+                            "value": 9
+                        },
+                        {
+                            "name": "<0.082 deg",
+                            "value": 8
+                        },
+                        {
+                            "name": "<0.058 deg",
+                            "value": 7
+                        },
+                        {
+                            "name": "<0.041 deg",
+                            "value": 6
+                        },
+                        {
+                            "name": "<0.029 deg",
+                            "value": 5
+                        },
+                        {
+                            "name": "<0.020 deg",
+                            "value": 4
+                        },
+                        {
+                            "name": "<0.014 deg",
+                            "value": 3
+                        },
+                        {
+                            "name": "<0.010 deg",
+                            "value": 2
+                        },
+                        {
+                            "name": "<0.007 deg",
+                            "value": 1
+                        },
+                        {
+                            "name": "<0.005 deg",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 5,
+                    "comment": "Object longitudinal distance standard deviation",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_DistLong_rms",
+                    "offset": 0.0,
+                    "start_bit": 11,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Invalid",
+                            "value": 31
+                        },
+                        {
+                            "name": "<10.000 m",
+                            "value": 30
+                        },
+                        {
+                            "name": "<7.762 m",
+                            "value": 29
+                        },
+                        {
+                            "name": "<6.025 m",
+                            "value": 28
+                        },
+                        {
+                            "name": "<4.676 m",
+                            "value": 27
+                        },
+                        {
+                            "name": "<3.630 m",
+                            "value": 26
+                        },
+                        {
+                            "name": "<2.817 m",
+                            "value": 25
+                        },
+                        {
+                            "name": "<2.187 m",
+                            "value": 24
+                        },
+                        {
+                            "name": "<1.697 m",
+                            "value": 23
+                        },
+                        {
+                            "name": "<1.317 m",
+                            "value": 22
+                        },
+                        {
+                            "name": "<1.023 m",
+                            "value": 21
+                        },
+                        {
+                            "name": "<0.794 m",
+                            "value": 20
+                        },
+                        {
+                            "name": "<0.616 m",
+                            "value": 19
+                        },
+                        {
+                            "name": "<0.478 m",
+                            "value": 18
+                        },
+                        {
+                            "name": "<0.371 m",
+                            "value": 17
+                        },
+                        {
+                            "name": "<0.288 m",
+                            "value": 16
+                        },
+                        {
+                            "name": "<0.224 m",
+                            "value": 15
+                        },
+                        {
+                            "name": "<0.174 m",
+                            "value": 14
+                        },
+                        {
+                            "name": "<0.135 m",
+                            "value": 13
+                        },
+                        {
+                            "name": "<0.105 m",
+                            "value": 12
+                        },
+                        {
+                            "name": "<0.081 m",
+                            "value": 11
+                        },
+                        {
+                            "name": "<0.063 m",
+                            "value": 10
+                        },
+                        {
+                            "name": "<0.049 m",
+                            "value": 9
+                        },
+                        {
+                            "name": "<0.038 m",
+                            "value": 8
+                        },
+                        {
+                            "name": "<0.029 m",
+                            "value": 7
+                        },
+                        {
+                            "name": "<0.023 m",
+                            "value": 6
+                        },
+                        {
+                            "name": "<0.018 m",
+                            "value": 5
+                        },
+                        {
+                            "name": "<0.014 m",
+                            "value": 4
+                        },
+                        {
+                            "name": "<0.011 m",
+                            "value": 3
+                        },
+                        {
+                            "name": "<0.008 m",
+                            "value": 2
+                        },
+                        {
+                            "name": "<0.006 m",
+                            "value": 1
+                        },
+                        {
+                            "name": "<0.005 m",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 5,
+                    "comment": "Object lateral distance standard deviation",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_DistLat_rms",
+                    "offset": 0.0,
+                    "start_bit": 22,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Invalid",
+                            "value": 31
+                        },
+                        {
+                            "name": "<10.000 m",
+                            "value": 30
+                        },
+                        {
+                            "name": "<7.762 m",
+                            "value": 29
+                        },
+                        {
+                            "name": "<6.025 m",
+                            "value": 28
+                        },
+                        {
+                            "name": "<4.676 m",
+                            "value": 27
+                        },
+                        {
+                            "name": "<3.630 m",
+                            "value": 26
+                        },
+                        {
+                            "name": "<2.817 m",
+                            "value": 25
+                        },
+                        {
+                            "name": "<2.187 m",
+                            "value": 24
+                        },
+                        {
+                            "name": "<1.697 m",
+                            "value": 23
+                        },
+                        {
+                            "name": "<1.317 m",
+                            "value": 22
+                        },
+                        {
+                            "name": "<1.023 m",
+                            "value": 21
+                        },
+                        {
+                            "name": "<0.794 m",
+                            "value": 20
+                        },
+                        {
+                            "name": "<0.616 m",
+                            "value": 19
+                        },
+                        {
+                            "name": "<0.478 m",
+                            "value": 18
+                        },
+                        {
+                            "name": "<0.371 m",
+                            "value": 17
+                        },
+                        {
+                            "name": "<0.288 m",
+                            "value": 16
+                        },
+                        {
+                            "name": "<0.224 m",
+                            "value": 15
+                        },
+                        {
+                            "name": "<0.174 m",
+                            "value": 14
+                        },
+                        {
+                            "name": "<0.135 m",
+                            "value": 13
+                        },
+                        {
+                            "name": "<0.105 m",
+                            "value": 12
+                        },
+                        {
+                            "name": "<0.081 m",
+                            "value": 11
+                        },
+                        {
+                            "name": "<0.063 m",
+                            "value": 10
+                        },
+                        {
+                            "name": "<0.049 m",
+                            "value": 9
+                        },
+                        {
+                            "name": "<0.038 m",
+                            "value": 8
+                        },
+                        {
+                            "name": "<0.029 m",
+                            "value": 7
+                        },
+                        {
+                            "name": "<0.023 m",
+                            "value": 6
+                        },
+                        {
+                            "name": "<0.018 m",
+                            "value": 5
+                        },
+                        {
+                            "name": "<0.014 m",
+                            "value": 4
+                        },
+                        {
+                            "name": "<0.011 m",
+                            "value": 3
+                        },
+                        {
+                            "name": "<0.008 m",
+                            "value": 2
+                        },
+                        {
+                            "name": "<0.006 m",
+                            "value": 1
+                        },
+                        {
+                            "name": "<0.005 m",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Object ID",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_ID",
+                    "offset": 0.0,
+                    "start_bit": 0,
+                    "value_max": 255.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Extended object information",
+            "dlc": 8,
+            "id": 1549,
+            "is_extended_frame": false,
+            "name": "Obj_3_Extended",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Object classification",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_Class",
+                    "offset": 0.0,
+                    "start_bit": 24,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Description for the value '0x7'",
+                            "value": 7
+                        },
+                        {
+                            "name": "Wide",
+                            "value": 6
+                        },
+                        {
+                            "name": "Bicycle",
+                            "value": 5
+                        },
+                        {
+                            "name": "Motorcycle",
+                            "value": 4
+                        },
+                        {
+                            "name": "Pedestrian",
+                            "value": 3
+                        },
+                        {
+                            "name": "Truck",
+                            "value": 2
+                        },
+                        {
+                            "name": "Car",
+                            "value": 1
+                        },
+                        {
+                            "name": "Point",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "250"
+                    },
+                    "bit_length": 9,
+                    "comment": "Object relative lateral acceleration",
+                    "factor": 0.01,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_ArelLat",
+                    "offset": -2.5,
+                    "start_bit": 28,
+                    "value_max": 2.61,
+                    "value_min": -2.5,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Object ID",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_ID",
+                    "offset": 0.0,
+                    "start_bit": 0,
+                    "value_max": 255.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "450"
+                    },
+                    "bit_length": 10,
+                    "comment": "Object orientation angle",
+                    "factor": 0.4,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_OrientationAngle",
+                    "offset": -180.0,
+                    "start_bit": 46,
+                    "value_max": 229.2,
+                    "value_min": -180.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Object width",
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_Width",
+                    "offset": 0.0,
+                    "start_bit": 56,
+                    "value_max": 51.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Object length",
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_Length",
+                    "offset": 0.0,
+                    "start_bit": 48,
+                    "value_max": 51.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "1000"
+                    },
+                    "bit_length": 11,
+                    "comment": "Object relative longitudinal acceleration",
+                    "factor": 0.01,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_ArelLong",
+                    "offset": -10.0,
+                    "start_bit": 21,
+                    "value_max": 10.47,
+                    "value_min": -10.0,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Collision detection region configuration and warning status",
+            "dlc": 8,
+            "id": 1026,
+            "is_extended_frame": false,
+            "name": "CollDetRegionState",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 2,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegState_WarningLevel",
+                    "offset": 0.0,
+                    "start_bit": 3,
+                    "value_max": 3.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Warning deactivated",
+                            "value": 3
+                        },
+                        {
+                            "name": "Preliminary warning",
+                            "value": 2
+                        },
+                        {
+                            "name": "Object warning",
+                            "value": 1
+                        },
+                        {
+                            "name": "No warning",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegState_NofObjects",
+                    "offset": 0.0,
+                    "start_bit": 56,
+                    "value_max": 255.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegState_RegionID",
+                    "offset": 0.0,
+                    "start_bit": 5,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "1023"
+                    },
+                    "bit_length": 11,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegState_Point2Y",
+                    "offset": -204.6,
+                    "start_bit": 48,
+                    "value_max": 204.8,
+                    "value_min": -204.6,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2500"
+                    },
+                    "bit_length": 13,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegState_Point2X",
+                    "offset": -500.0,
+                    "start_bit": 43,
+                    "value_max": 1138.2,
+                    "value_min": -500.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "1023"
+                    },
+                    "bit_length": 11,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegState_Point1Y",
+                    "offset": -204.6,
+                    "start_bit": 24,
+                    "value_max": 204.8,
+                    "value_min": -204.6,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2500"
+                    },
+                    "bit_length": 13,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegState_Point1X",
+                    "offset": -500.0,
+                    "start_bit": 19,
+                    "value_max": 1138.2,
+                    "value_min": -500.0,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Collision detection warning object information",
+            "dlc": 4,
+            "id": 1550,
+            "is_extended_frame": false,
+            "name": "Obj_4_Warning",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Region bit field with collision detection",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_CollDetRegionBitfield",
+                    "offset": 0.0,
+                    "start_bit": 8,
+                    "value_max": 255.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Object ID",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_ID",
+                    "offset": 0.0,
+                    "start_bit": 0,
+                    "value_max": 255.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Control message for relay to display collision detection",
+            "dlc": 1,
+            "id": 8,
+            "is_extended_frame": false,
+            "name": "CollDetRelayCtrl",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Region bit field for control relay",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRelayCtrl_Param",
+                    "offset": 0.0,
+                    "start_bit": 0,
+                    "value_max": 255.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Filter configuration status",
+            "dlc": 5,
+            "id": 516,
+            "is_extended_frame": false,
+            "name": "FilterState_Cfg",
+            "signals": [
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2047.5"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_Y",
+                    "offset": -409.5,
+                    "start_bit": 16,
+                    "value_max": 409.5,
+                    "value_min": -409.5,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2047.5"
+                    },
+                    "bit_length": 13,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_X",
+                    "offset": -500.0,
+                    "start_bit": 16,
+                    "value_max": 1138.2,
+                    "value_min": -500.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_VYRightLeft",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_VYLeftRight",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_VXOncome",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_VXDepart",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2047.5"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_Y",
+                    "offset": -409.5,
+                    "start_bit": 32,
+                    "value_max": 409.5,
+                    "value_min": -409.5,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2047.5"
+                    },
+                    "bit_length": 13,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_X",
+                    "offset": -500.0,
+                    "start_bit": 32,
+                    "value_max": 1138.2,
+                    "value_min": -500.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_VYRightLeft",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_VYLeftRight",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_VXOncome",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_VXDepart",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Type",
+                    "offset": 0.0,
+                    "start_bit": 7,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Object filter",
+                            "value": 1
+                        },
+                        {
+                            "name": "Cluster filter",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_VrelOncome",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_VrelDepart",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.025,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_Size",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 102.375,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2000"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.025,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_RCS",
+                    "offset": -50.0,
+                    "start_bit": 16,
+                    "value_max": 52.375,
+                    "value_min": -50.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_ProbExists",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "100%",
+                            "value": 7
+                        },
+                        {
+                            "name": ">=99.9%",
+                            "value": 6
+                        },
+                        {
+                            "name": ">=99%",
+                            "value": 5
+                        },
+                        {
+                            "name": ">=90%",
+                            "value": 4
+                        },
+                        {
+                            "name": ">=75%",
+                            "value": 3
+                        },
+                        {
+                            "name": ">=50%",
+                            "value": 2
+                        },
+                        {
+                            "name": ">=25%",
+                            "value": 1
+                        },
+                        {
+                            "name": "invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_NofObj",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 4095.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.1,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_Lifetime",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 409.5,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.1,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_Distance",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 409.5,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2000"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.025,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Min_Azimuth",
+                    "offset": -50.0,
+                    "start_bit": 16,
+                    "value_max": 52.375,
+                    "value_min": -50.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_VrelOncome",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_VrelDepart",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.025,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_Size",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 102.375,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2000"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.025,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_RCS",
+                    "offset": -50.0,
+                    "start_bit": 32,
+                    "value_max": 52.375,
+                    "value_min": -50.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_ProbExists",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 4095.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "<=100%",
+                            "value": 7
+                        },
+                        {
+                            "name": "<99.9%",
+                            "value": 6
+                        },
+                        {
+                            "name": "<99%",
+                            "value": 5
+                        },
+                        {
+                            "name": "<90%",
+                            "value": 4
+                        },
+                        {
+                            "name": "<75%",
+                            "value": 3
+                        },
+                        {
+                            "name": "<50%",
+                            "value": 2
+                        },
+                        {
+                            "name": "<25%",
+                            "value": 1
+                        },
+                        {
+                            "name": "invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_NofObj",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 4095.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.1,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_Lifetime",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 409.5,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.1,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_Distance",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 409.5,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2000"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.025,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Max_Azimuth",
+                    "offset": -50.0,
+                    "start_bit": 32,
+                    "value_max": 52.375,
+                    "value_min": -50.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 4,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Index",
+                    "offset": 0.0,
+                    "start_bit": 3,
+                    "value_max": 15.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Reserved",
+                            "value": 15
+                        },
+                        {
+                            "name": "Longitud. velocity for departing",
+                            "value": 14
+                        },
+                        {
+                            "name": "Lateral velocity for right-left",
+                            "value": 13
+                        },
+                        {
+                            "name": "Longitud. velocity for oncoming",
+                            "value": 12
+                        },
+                        {
+                            "name": "Lateral velocity for left-right",
+                            "value": 11
+                        },
+                        {
+                            "name": "Longitudinal distance",
+                            "value": 10
+                        },
+                        {
+                            "name": "Lateral distance",
+                            "value": 9
+                        },
+                        {
+                            "name": "Probability of existence",
+                            "value": 8
+                        },
+                        {
+                            "name": "Size",
+                            "value": 7
+                        },
+                        {
+                            "name": "Lifetime",
+                            "value": 6
+                        },
+                        {
+                            "name": "RCS",
+                            "value": 5
+                        },
+                        {
+                            "name": "Radial velocity for departing",
+                            "value": 4
+                        },
+                        {
+                            "name": "Radial velocity for oncoming",
+                            "value": 3
+                        },
+                        {
+                            "name": "Azimuth",
+                            "value": 2
+                        },
+                        {
+                            "name": "Radial distance",
+                            "value": 1
+                        },
+                        {
+                            "name": "Number of objects",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_Active",
+                    "offset": 0.0,
+                    "start_bit": 2,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "active",
+                            "value": 1
+                        },
+                        {
+                            "name": "inactive",
+                            "value": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Header of filter configuration state",
+            "dlc": 2,
+            "id": 515,
+            "is_extended_frame": false,
+            "name": "FilterState_Header",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 5,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_NofObjectFilterCfg",
+                    "offset": 0.0,
+                    "start_bit": 11,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 5,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterState_NofClusterFilterCfg",
+                    "offset": 0.0,
+                    "start_bit": 3,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Filter configuration",
+            "dlc": 5,
+            "id": 514,
+            "is_extended_frame": false,
+            "name": "FilterCfg",
+            "signals": [
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2047.5"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_Y",
+                    "offset": -409.5,
+                    "start_bit": 16,
+                    "value_max": 409.5,
+                    "value_min": -409.5,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2500"
+                    },
+                    "bit_length": 13,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_X",
+                    "offset": -500.0,
+                    "start_bit": 16,
+                    "value_max": 1138.2,
+                    "value_min": -500.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_VYRightLeft",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_VYLeftRight",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_VXOncome",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_VXDepart",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2047.5"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_Y",
+                    "offset": -409.5,
+                    "start_bit": 32,
+                    "value_max": 409.5,
+                    "value_min": -409.5,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2500"
+                    },
+                    "bit_length": 13,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_X",
+                    "offset": -500.0,
+                    "start_bit": 32,
+                    "value_max": 1138.2,
+                    "value_min": -500.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_VYRightLeft",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_VXOncome",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_VYLeftRight",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_VXDepart",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Valid",
+                    "offset": 0.0,
+                    "start_bit": 1,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "valid",
+                            "value": 1
+                        },
+                        {
+                            "name": "invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Active",
+                    "offset": 0.0,
+                    "start_bit": 2,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "active",
+                            "value": 1
+                        },
+                        {
+                            "name": "inactive",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_VrelOncome",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_VrelDepart",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.025,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_Size",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 102.375,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2000"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.025,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_RCS",
+                    "offset": -50.0,
+                    "start_bit": 32,
+                    "value_max": 52.375,
+                    "value_min": -50.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_ProbExists",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "<=100%",
+                            "value": 7
+                        },
+                        {
+                            "name": "<99.9%",
+                            "value": 6
+                        },
+                        {
+                            "name": "<99%",
+                            "value": 5
+                        },
+                        {
+                            "name": "<90%",
+                            "value": 4
+                        },
+                        {
+                            "name": "<75%",
+                            "value": 3
+                        },
+                        {
+                            "name": "<50%",
+                            "value": 2
+                        },
+                        {
+                            "name": "<25%",
+                            "value": 1
+                        },
+                        {
+                            "name": "invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_NofObj",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 4095.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.1,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_Lifetime",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 409.5,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.1,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_Distance",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 409.5,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2000"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.025,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Max_Azimuth",
+                    "offset": -50.0,
+                    "start_bit": 32,
+                    "value_max": 52.375,
+                    "value_min": -50.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_VrelOncome",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.0315,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_VrelDepart",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 128.9925,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.025,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_Size",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 102.375,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2000"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.025,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_RCS",
+                    "offset": -50.0,
+                    "start_bit": 16,
+                    "value_max": 52.375,
+                    "value_min": -50.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_ProbExists",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 4095.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "100%",
+                            "value": 7
+                        },
+                        {
+                            "name": ">=99.9%",
+                            "value": 6
+                        },
+                        {
+                            "name": ">=99%",
+                            "value": 5
+                        },
+                        {
+                            "name": ">=90%",
+                            "value": 4
+                        },
+                        {
+                            "name": ">=75%",
+                            "value": 3
+                        },
+                        {
+                            "name": ">=50%",
+                            "value": 2
+                        },
+                        {
+                            "name": ">=25%",
+                            "value": 1
+                        },
+                        {
+                            "name": "invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.1,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_Lifetime",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 409.5,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2000"
+                    },
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.025,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_Azimuth",
+                    "offset": -50.0,
+                    "start_bit": 16,
+                    "value_max": 52.375,
+                    "value_min": -50.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_NofObj",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 4095.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 12,
+                    "comment": null,
+                    "factor": 0.1,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Min_Distance",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 409.5,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 4,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Index",
+                    "offset": 0.0,
+                    "start_bit": 3,
+                    "value_max": 15.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Reserved",
+                            "value": 15
+                        },
+                        {
+                            "name": "Longitud. velocity for departing",
+                            "value": 14
+                        },
+                        {
+                            "name": "Lateral velocity for right-left",
+                            "value": 13
+                        },
+                        {
+                            "name": "Longitud. velocity for oncoming",
+                            "value": 12
+                        },
+                        {
+                            "name": "Lateral velocity for left-right",
+                            "value": 11
+                        },
+                        {
+                            "name": "Longitudinal distance",
+                            "value": 10
+                        },
+                        {
+                            "name": "Lateral distance",
+                            "value": 9
+                        },
+                        {
+                            "name": "Probability of existence",
+                            "value": 8
+                        },
+                        {
+                            "name": "Size",
+                            "value": 7
+                        },
+                        {
+                            "name": "Lifetime",
+                            "value": 6
+                        },
+                        {
+                            "name": "RCS",
+                            "value": 5
+                        },
+                        {
+                            "name": "Radial velocity for departing",
+                            "value": 4
+                        },
+                        {
+                            "name": "Radial velocity for oncoming",
+                            "value": 3
+                        },
+                        {
+                            "name": "Azimuth",
+                            "value": 2
+                        },
+                        {
+                            "name": "Radial distance",
+                            "value": 1
+                        },
+                        {
+                            "name": "Number of objects",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "FilterCfg_Type",
+                    "offset": 0.0,
+                    "start_bit": 7,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Object filter",
+                            "value": 1
+                        },
+                        {
+                            "name": "Cluster filter",
+                            "value": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Radar configuration",
+            "dlc": 8,
+            "id": 512,
+            "is_extended_frame": false,
+            "name": "RadarConfiguration",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Allows changing the RCS_Threshold parameter",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_RCS_Threshold_Valid",
+                    "offset": 0.0,
+                    "start_bit": 48,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Valid",
+                            "value": 1
+                        },
+                        {
+                            "name": "Invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Standard or high sensitivity for cluster list output",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_RCS_Threshold",
+                    "offset": 0.0,
+                    "start_bit": 49,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Reserved",
+                            "value": 7
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 6
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 5
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 4
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 3
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 2
+                        },
+                        {
+                            "name": "High Sensitivity",
+                            "value": 1
+                        },
+                        {
+                            "name": "Standard",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Allows changing the StoreInNvm parameter",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_StoreInNVM_valid",
+                    "offset": 0.0,
+                    "start_bit": 7,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Valid",
+                            "value": 1
+                        },
+                        {
+                            "name": "Invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Allows changing the SortIndex parameter",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_SortIndex_valid",
+                    "offset": 0.0,
+                    "start_bit": 6,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Valid",
+                            "value": 1
+                        },
+                        {
+                            "name": "Invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Object sort index",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_SortIndex",
+                    "offset": 0.0,
+                    "start_bit": 44,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Sorted by RCS",
+                            "value": 2
+                        },
+                        {
+                            "name": "Sorted by range",
+                            "value": 1
+                        },
+                        {
+                            "name": "No sorting",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Store configuration in Nvm",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_StoreInNVM",
+                    "offset": 0.0,
+                    "start_bit": 47,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Active",
+                            "value": 1
+                        },
+                        {
+                            "name": "Inactive",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Allows changing the SendExtInfo parameter",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_SendExtInfo_valid",
+                    "offset": 0.0,
+                    "start_bit": 5,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Valid",
+                            "value": 1
+                        },
+                        {
+                            "name": "Invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Enables output of extended message",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_SendExtInfo",
+                    "offset": 0.0,
+                    "start_bit": 43,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Active",
+                            "value": 1
+                        },
+                        {
+                            "name": "Inactive",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Allows changing the CtrlRelay parameter",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_CtrlRelay_valid",
+                    "offset": 0.0,
+                    "start_bit": 40,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Valid",
+                            "value": 1
+                        },
+                        {
+                            "name": "Invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Enables output of CtrlRelay message if CollDet is active",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_CtrlRelay",
+                    "offset": 0.0,
+                    "start_bit": 41,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Active",
+                            "value": 1
+                        },
+                        {
+                            "name": "Inactive",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Allows changing the SendQuality parameter",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_SendQuality_valid",
+                    "offset": 0.0,
+                    "start_bit": 4,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Valid",
+                            "value": 1
+                        },
+                        {
+                            "name": "Invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Enables output of quality message",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_SendQuality",
+                    "offset": 0.0,
+                    "start_bit": 42,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Active",
+                            "value": 1
+                        },
+                        {
+                            "name": "Inactive",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Allows changing the MaxDistance parameter",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_MaxDistance_valid",
+                    "offset": 0.0,
+                    "start_bit": 0,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Valid",
+                            "value": 1
+                        },
+                        {
+                            "name": "Invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Allows changing the RadarPower parameter",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_RadarPower_valid",
+                    "offset": 0.0,
+                    "start_bit": 2,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Valid",
+                            "value": 1
+                        },
+                        {
+                            "name": "Invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Allows changing the OutputType parameter",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_OutputType_valid",
+                    "offset": 0.0,
+                    "start_bit": 3,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Valid",
+                            "value": 1
+                        },
+                        {
+                            "name": "Invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Allows changing the SensorId parameter",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_SensorID_valid",
+                    "offset": 0.0,
+                    "start_bit": 1,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Valid",
+                            "value": 1
+                        },
+                        {
+                            "name": "Invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 10,
+                    "comment": "Maximum distance of far scan",
+                    "factor": 2.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_MaxDistance",
+                    "offset": 0.0,
+                    "start_bit": 22,
+                    "value_max": 2046.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Radar Tx output power reduction (Tx attenuation)",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_RadarPower",
+                    "offset": 0.0,
+                    "start_bit": 37,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Reserved",
+                            "value": 7
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 6
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 5
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 4
+                        },
+                        {
+                            "name": "-9 dB Tx gain",
+                            "value": 3
+                        },
+                        {
+                            "name": "-6 dB Tx gain",
+                            "value": 2
+                        },
+                        {
+                            "name": "-3 dB Tx gain",
+                            "value": 1
+                        },
+                        {
+                            "name": "Standard",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 2,
+                    "comment": "Data output type",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_OutputType",
+                    "offset": 0.0,
+                    "start_bit": 35,
+                    "value_max": 2.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "reserved 2",
+                            "value": 3
+                        },
+                        {
+                            "name": "SendClusters",
+                            "value": 2
+                        },
+                        {
+                            "name": "SendObjects",
+                            "value": 1
+                        },
+                        {
+                            "name": "None",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Sensor ID (0 to 7)",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarCfg_SensorID",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {
+                "App-Botschaft": "0",
+                "DiagRequest": "0",
+                "DiagResponse": "0",
+                "DiagState": "0",
+                "GenMsgCycleTime": "50",
+                "GenMsgDelayTime": "20",
+                "GenMsgNrOfRepetitions": "0",
+                "GenMsgSendType": "0",
+                "NWM-Botschaft": "0"
+            },
+            "comment": "Radar configuration status",
+            "dlc": 8,
+            "id": 513,
+            "is_extended_frame": false,
+            "name": "RadarState",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Current sorting of object list",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarState_SortIndex",
+                    "offset": 0.0,
+                    "start_bit": 36,
+                    "value_max": 0.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Current sensitivity mode",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarState_RCS_Threshold",
+                    "offset": 0.0,
+                    "start_bit": 58,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Reserved",
+                            "value": 7
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 6
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 5
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 4
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 3
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 2
+                        },
+                        {
+                            "name": "High Sensitivity",
+                            "value": 1
+                        },
+                        {
+                            "name": "Standard",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Status of control relay message output",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarState_CtrlRelayCfg",
+                    "offset": 0.0,
+                    "start_bit": 41,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Active",
+                            "value": 1
+                        },
+                        {
+                            "name": "Inactive",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Status of quality information output",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarState_SendQualityCfg",
+                    "offset": 0.0,
+                    "start_bit": 44,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Active",
+                            "value": 1
+                        },
+                        {
+                            "name": "Inactive",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Status of extended information output",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarState_SendExtInfoCfg",
+                    "offset": 0.0,
+                    "start_bit": 45,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Active",
+                            "value": 1
+                        },
+                        {
+                            "name": "Inactive",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {
+                        "GenSigCycleTime": "50",
+                        "GenSigSendType": "0",
+                        "GenSigStartValue": "0"
+                    },
+                    "bit_length": 2,
+                    "comment": "Status of motion input signals",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarState_MotionRxState",
+                    "offset": 0.0,
+                    "start_bit": 46,
+                    "value_max": 3.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Speed and yaw rate missing",
+                            "value": 3
+                        },
+                        {
+                            "name": "Yaw rate missing",
+                            "value": 2
+                        },
+                        {
+                            "name": "Speed missing",
+                            "value": 1
+                        },
+                        {
+                            "name": "Input ok",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Sensor ID (0 to 7)",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarState_SensorID",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 2,
+                    "comment": "Current output list type",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarState_OutputTypeCfg",
+                    "offset": 0.0,
+                    "start_bit": 42,
+                    "value_max": 3.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "reserved 2",
+                            "value": 3
+                        },
+                        {
+                            "name": "SendClusters",
+                            "value": 2
+                        },
+                        {
+                            "name": "SendObjects",
+                            "value": 1
+                        },
+                        {
+                            "name": "None",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Radar Tx output level (Tx attenuation)",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarState_RadarPowerCfg",
+                    "offset": 0.0,
+                    "start_bit": 39,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Reserved",
+                            "value": 7
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 6
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 5
+                        },
+                        {
+                            "name": "Reserved",
+                            "value": 4
+                        },
+                        {
+                            "name": "-9 dB Tx gain",
+                            "value": 3
+                        },
+                        {
+                            "name": "-6 dB Tx gain",
+                            "value": 2
+                        },
+                        {
+                            "name": "-3 dB Tx gain",
+                            "value": 1
+                        },
+                        {
+                            "name": "Standard",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Gives the status of reading the radar configuration from EEPROM",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarState_NVMReadStatus",
+                    "offset": 0.0,
+                    "start_bit": 6,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "successful",
+                            "value": 1
+                        },
+                        {
+                            "name": "pending",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": "Gives the status of writing the radar configuration from EEPROM\n",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarState_NVMwriteStatus",
+                    "offset": 0.0,
+                    "start_bit": 7,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "successful",
+                            "value": 1
+                        },
+                        {
+                            "name": "failed",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 10,
+                    "comment": "Currently configured maximum distance of far scan",
+                    "factor": 2.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarState_MaxDistanceCfg",
+                    "offset": 0.0,
+                    "start_bit": 22,
+                    "value_max": 2046.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Device movement speed",
+            "dlc": 2,
+            "id": 768,
+            "is_extended_frame": false,
+            "name": "SpeedInformation",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 13,
+                    "comment": "Speed of the radar unit",
+                    "factor": 0.02,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarDevice_Speed",
+                    "offset": 0.0,
+                    "start_bit": 8,
+                    "value_max": 163.8,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 2,
+                    "comment": "Speed direction of the radar unit",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarDevice_SpeedDirection",
+                    "offset": 0.0,
+                    "start_bit": 6,
+                    "value_max": 2.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "reserved",
+                            "value": 3
+                        },
+                        {
+                            "name": "reverse",
+                            "value": 2
+                        },
+                        {
+                            "name": "forward",
+                            "value": 1
+                        },
+                        {
+                            "name": "standstill",
+                            "value": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Device movement yaw rate",
+            "dlc": 2,
+            "id": 769,
+            "is_extended_frame": false,
+            "name": "YawRateInformation",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 16,
+                    "comment": "Yaw rate of the radar unit",
+                    "factor": 0.01,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "RadarDevice_YawRate",
+                    "offset": -327.68,
+                    "start_bit": 8,
+                    "value_max": 327.66,
+                    "value_min": -327.68,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Collision detection configuration",
+            "dlc": 2,
+            "id": 1024,
+            "is_extended_frame": false,
+            "name": "CollDetCfg",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetCfg_ClearRegions",
+                    "offset": 0.0,
+                    "start_bit": 7,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Clear all defined regions",
+                            "value": 1
+                        },
+                        {
+                            "name": "Idle",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetCfg_WarningReset",
+                    "offset": 0.0,
+                    "start_bit": 0,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Warn reset",
+                            "value": 1
+                        },
+                        {
+                            "name": "Idle",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetCfg_Activate",
+                    "offset": 0.0,
+                    "start_bit": 1,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Active",
+                            "value": 1
+                        },
+                        {
+                            "name": "Inactive",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetCfg_MinTime_valid",
+                    "offset": 0.0,
+                    "start_bit": 3,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Valid",
+                            "value": 1
+                        },
+                        {
+                            "name": "Invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": null,
+                    "factor": 0.1,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetCfg_MinDetectTime",
+                    "offset": 0.0,
+                    "start_bit": 8,
+                    "value_max": 25.5,
+                    "value_min": 0.0,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Collision detection region configuration",
+            "dlc": 8,
+            "id": 1025,
+            "is_extended_frame": false,
+            "name": "CollDetRegionCfg",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegCfg_Activate",
+                    "offset": 0.0,
+                    "start_bit": 1,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Active",
+                            "value": 1
+                        },
+                        {
+                            "name": "Inactive",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegCfg_Coordinates_valid",
+                    "offset": 0.0,
+                    "start_bit": 2,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Valid",
+                            "value": 1
+                        },
+                        {
+                            "name": "Invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegCfg_RegionID",
+                    "offset": 0.0,
+                    "start_bit": 8,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2500"
+                    },
+                    "bit_length": 13,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegCfg_Point1X",
+                    "offset": -500.0,
+                    "start_bit": 27,
+                    "value_max": 1138.2,
+                    "value_min": -500.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "1023"
+                    },
+                    "bit_length": 11,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegCfg_Point1Y",
+                    "offset": -204.6,
+                    "start_bit": 32,
+                    "value_max": 204.8,
+                    "value_min": -204.6,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2500"
+                    },
+                    "bit_length": 13,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegCfg_Point2X",
+                    "offset": -500.0,
+                    "start_bit": 51,
+                    "value_max": 1138.2,
+                    "value_min": -500.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "1023"
+                    },
+                    "bit_length": 11,
+                    "comment": null,
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetRegCfg_Point2Y",
+                    "offset": -204.6,
+                    "start_bit": 56,
+                    "value_max": 204.8,
+                    "value_min": -204.6,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Collision detection configuration status",
+            "dlc": 4,
+            "id": 1032,
+            "is_extended_frame": false,
+            "name": "CollDetState",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 16,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetState_MeasCounter",
+                    "offset": 0.0,
+                    "start_bit": 24,
+                    "value_max": 65535.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 1,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetState_Active",
+                    "offset": 0.0,
+                    "start_bit": 1,
+                    "value_max": 1.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Active",
+                            "value": 1
+                        },
+                        {
+                            "name": "Inactive",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 4,
+                    "comment": null,
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetState_NofRegions",
+                    "offset": 0.0,
+                    "start_bit": 4,
+                    "value_max": 15.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": null,
+                    "factor": 0.1,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "CollDetState_MinDetectTime",
+                    "offset": 0.0,
+                    "start_bit": 8,
+                    "value_max": 25.5,
+                    "value_min": 0.0,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Status information about Clusters",
+            "dlc": 5,
+            "id": 1536,
+            "is_extended_frame": false,
+            "name": "Cluster_0_Status",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 16,
+                    "comment": "Measurement counter",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_MeasCounter",
+                    "offset": 0.0,
+                    "start_bit": 24,
+                    "value_max": 65535.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Number of valid Clusters in near range scan",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_NofClustersNear",
+                    "offset": 0.0,
+                    "start_bit": 0,
+                    "value_max": 255.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Number of valid Clusters in far range scan",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_NofClustersFar",
+                    "offset": 0.0,
+                    "start_bit": 8,
+                    "value_max": 255.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 4,
+                    "comment": "Cluster CAN Interface Version Number",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_InterfaceVersion",
+                    "offset": 0.0,
+                    "start_bit": 36,
+                    "value_max": 15.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Status information about object",
+            "dlc": 4,
+            "id": 1546,
+            "is_extended_frame": false,
+            "name": "Obj_0_Status",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Number of Objects sent",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_NofObjects",
+                    "offset": 0.0,
+                    "start_bit": 0,
+                    "value_max": 255.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 16,
+                    "comment": "Measurement Counter",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_MeasCounter",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 65535.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 4,
+                    "comment": "Object CAN Interface Version Number",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_InterfaceVersion",
+                    "offset": 0.0,
+                    "start_bit": 28,
+                    "value_max": 16.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "General object information",
+            "dlc": 8,
+            "id": 1547,
+            "is_extended_frame": false,
+            "name": "Obj_1_General",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Object dynamic property",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_DynProp",
+                    "offset": 0.0,
+                    "start_bit": 48,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Stopped",
+                            "value": 7
+                        },
+                        {
+                            "name": "Crossing moving",
+                            "value": 6
+                        },
+                        {
+                            "name": "Crossing stationary",
+                            "value": 5
+                        },
+                        {
+                            "name": "Unknown",
+                            "value": 4
+                        },
+                        {
+                            "name": "Stationary candidate",
+                            "value": 3
+                        },
+                        {
+                            "name": "Oncoming",
+                            "value": 2
+                        },
+                        {
+                            "name": "Stationary",
+                            "value": 1
+                        },
+                        {
+                            "name": "Moving",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Object RCS value (radar cross section)",
+                    "factor": 0.5,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_RCS",
+                    "offset": -64.0,
+                    "start_bit": 56,
+                    "value_max": 63.5,
+                    "value_min": -64.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "256"
+                    },
+                    "bit_length": 9,
+                    "comment": "Object relative lateral velocity",
+                    "factor": 0.25,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_VrelLat",
+                    "offset": -64.0,
+                    "start_bit": 53,
+                    "value_max": 63.75,
+                    "value_min": -64.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Object ID",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_ID",
+                    "offset": 0.0,
+                    "start_bit": 0,
+                    "value_max": 255.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2500"
+                    },
+                    "bit_length": 13,
+                    "comment": "Object longitudinal displacement",
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_DistLong",
+                    "offset": -500.0,
+                    "start_bit": 19,
+                    "value_max": 1138.2,
+                    "value_min": -500.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "512"
+                    },
+                    "bit_length": 10,
+                    "comment": "Object relative longitudinal velocity",
+                    "factor": 0.25,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_VrelLong",
+                    "offset": -128.0,
+                    "start_bit": 46,
+                    "value_max": 127.75,
+                    "value_min": -128.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "1023"
+                    },
+                    "bit_length": 11,
+                    "comment": "Object lateral displacement",
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Obj_DistLat",
+                    "offset": -204.6,
+                    "start_bit": 24,
+                    "value_max": 204.8,
+                    "value_min": -204.6,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Firmware version",
+            "dlc": 3,
+            "id": 1792,
+            "is_extended_frame": false,
+            "name": "VersionID",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Major Release Number",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Version_MajorRelease",
+                    "offset": 0.0,
+                    "start_bit": 0,
+                    "value_max": 256.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Minor Release Number",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Version_MinorRelease",
+                    "offset": 0.0,
+                    "start_bit": 8,
+                    "value_max": 256.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Patch Level",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Version_PatchLevel",
+                    "offset": 0.0,
+                    "start_bit": 16,
+                    "value_max": 256.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "General Cluster information",
+            "dlc": 8,
+            "id": 1793,
+            "is_extended_frame": false,
+            "name": "Cluster_1_General",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Cluster dynamic property",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_DynProp",
+                    "offset": 0.0,
+                    "start_bit": 48,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Stopped",
+                            "value": 7
+                        },
+                        {
+                            "name": "Crossing moving",
+                            "value": 6
+                        },
+                        {
+                            "name": "Crossing stationary",
+                            "value": 5
+                        },
+                        {
+                            "name": "Unknown",
+                            "value": 4
+                        },
+                        {
+                            "name": "Stationary candidate",
+                            "value": 3
+                        },
+                        {
+                            "name": "Oncoming",
+                            "value": 2
+                        },
+                        {
+                            "name": "Stationary",
+                            "value": 1
+                        },
+                        {
+                            "name": "Moving",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "256"
+                    },
+                    "bit_length": 9,
+                    "comment": "Cluster relative lateral velocity",
+                    "factor": 0.25,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_VrelLat",
+                    "offset": -64.0,
+                    "start_bit": 53,
+                    "value_max": 63.75,
+                    "value_min": -64.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Cluster RCS value (Radar cross section)",
+                    "factor": 0.5,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_RCS",
+                    "offset": -64.0,
+                    "start_bit": 56,
+                    "value_max": 63.5,
+                    "value_min": -64.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "2500"
+                    },
+                    "bit_length": 13,
+                    "comment": "Cluster longitudinal distance",
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_DistLong",
+                    "offset": -500.0,
+                    "start_bit": 19,
+                    "value_max": 1138.2,
+                    "value_min": -500.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Cluster number",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_ID",
+                    "offset": 0.0,
+                    "start_bit": 0,
+                    "value_max": 255.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "512"
+                    },
+                    "bit_length": 10,
+                    "comment": "Cluster relative longitudinal velocity",
+                    "factor": 0.25,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_VrelLong",
+                    "offset": -128.0,
+                    "start_bit": 46,
+                    "value_max": 127.75,
+                    "value_min": -128.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {
+                        "GenSigStartValue": "511.5"
+                    },
+                    "bit_length": 10,
+                    "comment": "Cluster lateral distance",
+                    "factor": 0.2,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_DistLat",
+                    "offset": -102.3,
+                    "start_bit": 24,
+                    "value_max": 102.3,
+                    "value_min": -102.3,
+                    "value_table": []
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "comment": "Quality Cluster information",
+            "dlc": 5,
+            "id": 1794,
+            "is_extended_frame": false,
+            "name": "Cluster_2_Quality",
+            "signals": [
+                {
+                    "attributes": {},
+                    "bit_length": 8,
+                    "comment": "Cluster number",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_ID",
+                    "offset": 0.0,
+                    "start_bit": 0,
+                    "value_max": 255.0,
+                    "value_min": 0.0,
+                    "value_table": []
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 5,
+                    "comment": "Cluster relative lateral velocity standard deviation",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_VrelLat_rms",
+                    "offset": 0.0,
+                    "start_bit": 28,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Invalid",
+                            "value": 31
+                        },
+                        {
+                            "name": "<10.000 m/s",
+                            "value": 30
+                        },
+                        {
+                            "name": "<7.762 m/s",
+                            "value": 29
+                        },
+                        {
+                            "name": "<6.025 m/s",
+                            "value": 28
+                        },
+                        {
+                            "name": "<4.676 m/s",
+                            "value": 27
+                        },
+                        {
+                            "name": "<3.630 m/s",
+                            "value": 26
+                        },
+                        {
+                            "name": "<2.817 m/s",
+                            "value": 25
+                        },
+                        {
+                            "name": "<2.187 m/s",
+                            "value": 24
+                        },
+                        {
+                            "name": "<1.697 m/s",
+                            "value": 23
+                        },
+                        {
+                            "name": "<1.317 m/s",
+                            "value": 22
+                        },
+                        {
+                            "name": "<1.023 m/s",
+                            "value": 21
+                        },
+                        {
+                            "name": "<0.794 m/s",
+                            "value": 20
+                        },
+                        {
+                            "name": "<0.616 m/s",
+                            "value": 19
+                        },
+                        {
+                            "name": "<0.478 m/s",
+                            "value": 18
+                        },
+                        {
+                            "name": "<0.371 m/s",
+                            "value": 17
+                        },
+                        {
+                            "name": "<0.288 m/s",
+                            "value": 16
+                        },
+                        {
+                            "name": "<0.224 m/s",
+                            "value": 15
+                        },
+                        {
+                            "name": "<0.174 m/s",
+                            "value": 14
+                        },
+                        {
+                            "name": "<0.135 m/s",
+                            "value": 13
+                        },
+                        {
+                            "name": "<0.105 m/s",
+                            "value": 12
+                        },
+                        {
+                            "name": "<0.081 m/s",
+                            "value": 11
+                        },
+                        {
+                            "name": "<0.063 m/s",
+                            "value": 10
+                        },
+                        {
+                            "name": "<0.049 m/s",
+                            "value": 9
+                        },
+                        {
+                            "name": "<0.038 m/s",
+                            "value": 8
+                        },
+                        {
+                            "name": "<0.029 m/s",
+                            "value": 7
+                        },
+                        {
+                            "name": "<0.023 m/s",
+                            "value": 6
+                        },
+                        {
+                            "name": "<0.018 m/s",
+                            "value": 5
+                        },
+                        {
+                            "name": "<0.014 m/s",
+                            "value": 4
+                        },
+                        {
+                            "name": "<0.011 m/s",
+                            "value": 3
+                        },
+                        {
+                            "name": "<0.008 m/s",
+                            "value": 2
+                        },
+                        {
+                            "name": "<0.006 m/s",
+                            "value": 1
+                        },
+                        {
+                            "name": "<0.005 m/s",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 5,
+                    "comment": "Cluster invalid state",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_InvalidState",
+                    "offset": 0.0,
+                    "start_bit": 35,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Valid suspicious angle",
+                            "value": 17
+                        },
+                        {
+                            "name": "Valid multi-target",
+                            "value": 16
+                        },
+                        {
+                            "name": "Valid near above 95 m",
+                            "value": 15
+                        },
+                        {
+                            "name": "Invalid harmonics ",
+                            "value": 14
+                        },
+                        {
+                            "name": "reserved",
+                            "value": 13
+                        },
+                        {
+                            "name": "Valid artefact ",
+                            "value": 12
+                        },
+                        {
+                            "name": "Valid but no local maximum",
+                            "value": 11
+                        },
+                        {
+                            "name": "Valid 50 deg artefact",
+                            "value": 10
+                        },
+                        {
+                            "name": "Valid child",
+                            "value": 9
+                        },
+                        {
+                            "name": "Valid with elevation",
+                            "value": 8
+                        },
+                        {
+                            "name": "Invalid outside field of view",
+                            "value": 7
+                        },
+                        {
+                            "name": "Invalid mirror",
+                            "value": 6
+                        },
+                        {
+                            "name": "reserved",
+                            "value": 5
+                        },
+                        {
+                            "name": "Valid with low RCS",
+                            "value": 4
+                        },
+                        {
+                            "name": "Invalid far not confirmed",
+                            "value": 3
+                        },
+                        {
+                            "name": "Invalid nearfield",
+                            "value": 2
+                        },
+                        {
+                            "name": "Invalid with too low RCS",
+                            "value": 1
+                        },
+                        {
+                            "name": "Valid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 5,
+                    "comment": "Cluster lateral distance standard deviation",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_DistLat_rms",
+                    "offset": 0.0,
+                    "start_bit": 22,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Invalid",
+                            "value": 31
+                        },
+                        {
+                            "name": "<10.000 m",
+                            "value": 30
+                        },
+                        {
+                            "name": "<7.762 m",
+                            "value": 29
+                        },
+                        {
+                            "name": "<6.025 m",
+                            "value": 28
+                        },
+                        {
+                            "name": "<4.676 m",
+                            "value": 27
+                        },
+                        {
+                            "name": "<3.630 m",
+                            "value": 26
+                        },
+                        {
+                            "name": "<2.817 m",
+                            "value": 25
+                        },
+                        {
+                            "name": "<2.187 m",
+                            "value": 24
+                        },
+                        {
+                            "name": "<1.697 m",
+                            "value": 23
+                        },
+                        {
+                            "name": "<1.317 m",
+                            "value": 22
+                        },
+                        {
+                            "name": "<1.023 m",
+                            "value": 21
+                        },
+                        {
+                            "name": "<0.794 m",
+                            "value": 20
+                        },
+                        {
+                            "name": "<0.616 m",
+                            "value": 19
+                        },
+                        {
+                            "name": "<0.478 m",
+                            "value": 18
+                        },
+                        {
+                            "name": "<0.371 m",
+                            "value": 17
+                        },
+                        {
+                            "name": "<0.288 m",
+                            "value": 16
+                        },
+                        {
+                            "name": "<0.224 m",
+                            "value": 15
+                        },
+                        {
+                            "name": "<0.174 m",
+                            "value": 14
+                        },
+                        {
+                            "name": "<0.135 m",
+                            "value": 13
+                        },
+                        {
+                            "name": "<0.105 m",
+                            "value": 12
+                        },
+                        {
+                            "name": "<0.081 m",
+                            "value": 11
+                        },
+                        {
+                            "name": "<0.063 m",
+                            "value": 10
+                        },
+                        {
+                            "name": "<0.049 m",
+                            "value": 9
+                        },
+                        {
+                            "name": "<0.038 m",
+                            "value": 8
+                        },
+                        {
+                            "name": "<0.029 m",
+                            "value": 7
+                        },
+                        {
+                            "name": "<0.023 m",
+                            "value": 6
+                        },
+                        {
+                            "name": "<0.018 m",
+                            "value": 5
+                        },
+                        {
+                            "name": "<0.014 m",
+                            "value": 4
+                        },
+                        {
+                            "name": "<0.011 m",
+                            "value": 3
+                        },
+                        {
+                            "name": "<0.008 m",
+                            "value": 2
+                        },
+                        {
+                            "name": "<0.006 m",
+                            "value": 1
+                        },
+                        {
+                            "name": "<0.005 m",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 5,
+                    "comment": "Cluster longitudinal distance standard deviation",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_DistLong_rms",
+                    "offset": 0.0,
+                    "start_bit": 11,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Invalid",
+                            "value": 31
+                        },
+                        {
+                            "name": "<10.000 m",
+                            "value": 30
+                        },
+                        {
+                            "name": "<7.762 m",
+                            "value": 29
+                        },
+                        {
+                            "name": "<6.025 m",
+                            "value": 28
+                        },
+                        {
+                            "name": "<4.676 m",
+                            "value": 27
+                        },
+                        {
+                            "name": "<3.630 m",
+                            "value": 26
+                        },
+                        {
+                            "name": "<2.817 m",
+                            "value": 25
+                        },
+                        {
+                            "name": "<2.187 m",
+                            "value": 24
+                        },
+                        {
+                            "name": "<1.697 m",
+                            "value": 23
+                        },
+                        {
+                            "name": "<1.317 m",
+                            "value": 22
+                        },
+                        {
+                            "name": "<1.023 m",
+                            "value": 21
+                        },
+                        {
+                            "name": "<0.794 m",
+                            "value": 20
+                        },
+                        {
+                            "name": "<0.616 m",
+                            "value": 19
+                        },
+                        {
+                            "name": "<0.478 m",
+                            "value": 18
+                        },
+                        {
+                            "name": "<0.371 m",
+                            "value": 17
+                        },
+                        {
+                            "name": "<0.288 m",
+                            "value": 16
+                        },
+                        {
+                            "name": "<0.224 m",
+                            "value": 15
+                        },
+                        {
+                            "name": "<0.174 m",
+                            "value": 14
+                        },
+                        {
+                            "name": "<0.135 m",
+                            "value": 13
+                        },
+                        {
+                            "name": "<0.105 m",
+                            "value": 12
+                        },
+                        {
+                            "name": "<0.081 m",
+                            "value": 11
+                        },
+                        {
+                            "name": "<0.063 m",
+                            "value": 10
+                        },
+                        {
+                            "name": "<0.049 m",
+                            "value": 9
+                        },
+                        {
+                            "name": "<0.038 m",
+                            "value": 8
+                        },
+                        {
+                            "name": "<0.029 m",
+                            "value": 7
+                        },
+                        {
+                            "name": "<0.023 m",
+                            "value": 6
+                        },
+                        {
+                            "name": "<0.018 m",
+                            "value": 5
+                        },
+                        {
+                            "name": "<0.014 m",
+                            "value": 4
+                        },
+                        {
+                            "name": "<0.011 m",
+                            "value": 3
+                        },
+                        {
+                            "name": "<0.008 m",
+                            "value": 2
+                        },
+                        {
+                            "name": "<0.006 m",
+                            "value": 1
+                        },
+                        {
+                            "name": "<0.005 m",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 5,
+                    "comment": "Cluster relative longitudinal velocity standard deviation",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_VrelLong_rms",
+                    "offset": 0.0,
+                    "start_bit": 17,
+                    "value_max": 31.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Invalid",
+                            "value": 31
+                        },
+                        {
+                            "name": "<10.000 m/s",
+                            "value": 30
+                        },
+                        {
+                            "name": "<7.762 m/s",
+                            "value": 29
+                        },
+                        {
+                            "name": "<6.025 m/s",
+                            "value": 28
+                        },
+                        {
+                            "name": "<4.676 m/s",
+                            "value": 27
+                        },
+                        {
+                            "name": "<3.630 m/s",
+                            "value": 26
+                        },
+                        {
+                            "name": "<2.817 m/s",
+                            "value": 25
+                        },
+                        {
+                            "name": "<2.187 m/s",
+                            "value": 24
+                        },
+                        {
+                            "name": "<1.697 m/s",
+                            "value": 23
+                        },
+                        {
+                            "name": "<1.317 m/s",
+                            "value": 22
+                        },
+                        {
+                            "name": "<1.023 m/s",
+                            "value": 21
+                        },
+                        {
+                            "name": "<0.794 m/s",
+                            "value": 20
+                        },
+                        {
+                            "name": "<0.616 m/s",
+                            "value": 19
+                        },
+                        {
+                            "name": "<0.478 m/s",
+                            "value": 18
+                        },
+                        {
+                            "name": "<0.371 m/s",
+                            "value": 17
+                        },
+                        {
+                            "name": "<0.288 m/s",
+                            "value": 16
+                        },
+                        {
+                            "name": "<0.224 m/s",
+                            "value": 15
+                        },
+                        {
+                            "name": "<0.174 m/s",
+                            "value": 14
+                        },
+                        {
+                            "name": "<0.135 m/s",
+                            "value": 13
+                        },
+                        {
+                            "name": "<0.105 m/s",
+                            "value": 12
+                        },
+                        {
+                            "name": "<0.081 m/s",
+                            "value": 11
+                        },
+                        {
+                            "name": "<0.063 m/s",
+                            "value": 10
+                        },
+                        {
+                            "name": "<0.049 m/s",
+                            "value": 9
+                        },
+                        {
+                            "name": "<0.038 m/s",
+                            "value": 8
+                        },
+                        {
+                            "name": "<0.029 m/s",
+                            "value": 7
+                        },
+                        {
+                            "name": "<0.023 m/s",
+                            "value": 6
+                        },
+                        {
+                            "name": "<0.018 m/s",
+                            "value": 5
+                        },
+                        {
+                            "name": "<0.014 m/s",
+                            "value": 4
+                        },
+                        {
+                            "name": "<0.011 m/s",
+                            "value": 3
+                        },
+                        {
+                            "name": "<0.008 m/s",
+                            "value": 2
+                        },
+                        {
+                            "name": "<0.006 m/s",
+                            "value": 1
+                        },
+                        {
+                            "name": "<0.005 m/s",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Cluster false alarm probability",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_PdH0",
+                    "offset": 0.0,
+                    "start_bit": 24,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "<=100%",
+                            "value": 7
+                        },
+                        {
+                            "name": "<99.9%",
+                            "value": 6
+                        },
+                        {
+                            "name": "<99%",
+                            "value": 5
+                        },
+                        {
+                            "name": "<90%",
+                            "value": 4
+                        },
+                        {
+                            "name": "<75%",
+                            "value": 3
+                        },
+                        {
+                            "name": "<50%",
+                            "value": 2
+                        },
+                        {
+                            "name": "<25%",
+                            "value": 1
+                        },
+                        {
+                            "name": "invalid",
+                            "value": 0
+                        }
+                    ]
+                },
+                {
+                    "attributes": {},
+                    "bit_length": 3,
+                    "comment": "Cluster Doppler ambiguity status",
+                    "factor": 1.0,
+                    "is_big_endian": true,
+                    "is_signed": false,
+                    "name": "Cluster_AmbigState",
+                    "offset": 0.0,
+                    "start_bit": 32,
+                    "value_max": 7.0,
+                    "value_min": 0.0,
+                    "value_table": [
+                        {
+                            "name": "Stationary candidate",
+                            "value": 4
+                        },
+                        {
+                            "name": "Unambiguous",
+                            "value": 3
+                        },
+                        {
+                            "name": "Staggered ramp",
+                            "value": 2
+                        },
+                        {
+                            "name": "Ambiguous",
+                            "value": 1
+                        },
+                        {
+                            "name": "Invalid",
+                            "value": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

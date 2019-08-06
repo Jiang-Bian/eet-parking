@@ -1,0 +1,1 @@
+cmd_Release/obj.target/canbc.node := g++ -shared -pthread -rdynamic -m64  -Wl,-soname=canbc.node -o Release/obj.target/canbc.node -Wl,--start-group Release/obj.target/canbc/canbc.o Release/obj.target/canbc/canbc_node.o -Wl,--end-group 
