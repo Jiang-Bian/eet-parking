@@ -1,13 +1,11 @@
-let can = require('socketcan')
-let CANBC = require('./canbc/canbc').CANBC
+const can = require('socketcan')
+const WebSocket = require('ws')
+const CANBC = require('./canbc/canbc').CANBC
+const canbcTemplates = require("./inc/ARS408.json")
 
-let canbcTemplates = require("./inc/ARS408.json")
+const CANBUS = 'can0'
 
-let CANBUS = 'can0'
-
-let canbc = new CANBC({ canbus: CANBUS, templates: canbcTemplates.messages })
-
-let canbcMsg = {
+const canbcMsg = {
     attributes: {},
     comment: 'Quality object information',
     dlc: 7,
@@ -406,17 +404,32 @@ let canbcMsg = {
         }]
 }
 
-let canrawMsg = canbc.convert(canbcMsg)
-console.log('CANRAW DATA:', canrawMsg)
+const wss = new WebSocket.Server({ port: 8848 })
+wss.on('connection', ws => {
+    // ws.on('message', message => {
+    //     console.log(`Received message => ${message}`)
+    // })
+    //ws.send('Hello! Message From Server!!')
+    console.log('accepted a client connection!')
+})
 
-let canbcMsg1 = canbc.parse(canrawMsg)
-console.log('CANBC MSG:', canbcMsg1)
+const canbc = new CANBC({ canbus: CANBUS, templates: canbcTemplates.messages })
+const canbus = can.createRawChannel(CANBUS, true)
+canbus.addListener("onMessage", msg => {
+    wss.clients.forEach(client => {
+        if (client.readyState === WebSocket.OPEN) {
+            client.send(JSON.stringify(canbc.parse(msg)));
+        }
+    })
+})
 
-let canbus = can.createRawChannel(CANBUS, true)
+// let canrawMsg = canbc.convert(canbcMsg)
+// console.log('CANRAW DATA:', canrawMsg)
 
-// Log any message
-canbus.addListener("onMessage", function (msg) { console.log(msg); })
-canbus.send(canrawMsg)
+// let canbcMsg1 = canbc.parse(canrawMsg)
+// console.log('CANBC MSG:', canbcMsg1)
+
+//canbus.send(canrawMsg)
 
 canbus.start()
 

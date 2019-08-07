@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "socketcan": "^2.4.0"
+    "socketcan": "^2.4.0",
+    "ws": "^7.1.1"
   },
   "devDependencies": {},
   "scripts": {
