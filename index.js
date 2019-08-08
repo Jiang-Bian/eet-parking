@@ -415,13 +415,26 @@ wss.on('connection', ws => {
 
 const canbc = new CANBC({ canbus: CANBUS, templates: canbcTemplates.messages })
 const canbus = can.createRawChannel(CANBUS, true)
+
 canbus.addListener("onMessage", msg => {
+
     wss.clients.forEach(client => {
+    
         if (client.readyState === WebSocket.OPEN) {
-            client.send(JSON.stringify(canbc.parse(msg)));
+            parsedMsg = canbc.parse(msg)
+            parsedMsg.signals.forEach(signal => {
+                let newSignal = {}
+                newSignal.name = signal.name
+                newSignal.comment = signal.comment
+                newSignal.value = signal.value * signal.factor + signal.offset
+                signal = newSignal
+            })
+
+            client.send(JSON.stringify(parsedMsg))
         }
     })
 })
+
 
 // let canrawMsg = canbc.convert(canbcMsg)
 // console.log('CANRAW DATA:', canrawMsg)
