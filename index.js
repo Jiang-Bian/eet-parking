@@ -417,19 +417,17 @@ const canbc = new CANBC({ canbus: CANBUS, templates: canbcTemplates.messages })
 const canbus = can.createRawChannel(CANBUS, true)
 
 canbus.addListener("onMessage", msg => {
-
     wss.clients.forEach(client => {
-    
         if (client.readyState === WebSocket.OPEN) {
             parsedMsg = canbc.parse(msg)
-            parsedMsg.signals.forEach(signal => {
+            for (let i = 0; i < parsedMsg.signals.length; i++) {
                 let newSignal = {}
-                newSignal.name = signal.name
-                newSignal.comment = signal.comment
-                newSignal.value = signal.value * signal.factor + signal.offset
-                signal = newSignal
-            })
-
+                newSignal.name = parsedMsg.signals[i].name
+                newSignal.comment = parsedMsg.signals[i].comment
+                newSignal.value = parsedMsg.signals[i].value * parsedMsg.signals[i].factor + parsedMsg.signals[i].offset
+                newSignal.value_name = parsedMsg.signals[i].value_name
+                parsedMsg.signals[i] = newSignal
+            }
             client.send(JSON.stringify(parsedMsg))
         }
     })
