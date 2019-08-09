@@ -10,7 +10,6 @@
 #include "../inc/json.hpp"
 using json = nlohmann::json;
 
-
 struct CANBCSignal_T
 {
 	std::string name;	  //Parameter's Name (singal's name)
@@ -91,19 +90,9 @@ struct CANBCSignal_T
 
 	json toJSON() const
 	{
-		json j = {
-			{"name", this->name},
-			{"start_bit", this->origian_start_bit},
-			{"bit_length", this->bit_length},
-			{"offset", this->offset},
-			{"factor", this->factor},
-			{"value_min", this->value_min},
-			{"value_max", this->value_max},
-			{"is_big_endian", this->is_big_endian},
-			//{"position", this->position},
-			{"value", this->value},
-			{"value_name", this->get_value_name()}};
-		return j;
+		return json({{"name", this->name},
+					 {"value", (float)(this->value * this->factor + this->offset)},
+					 {"value_name", this->get_value_name()}});
 	}
 
 	void set_value(const std::vector<unsigned char> &data_vec)
