@@ -9,17 +9,18 @@ console.log('CANRAW DATA:', canrawMsg)
 
 let parsedMsg = JSON.parse(JSON.stringify(canbc.parse(canrawMsg)))
 
-for (let i = 0; i < parsedMsg.signals.length; i++) {
-    parsedMsg.signals[i].value = parsedMsg.signals[i].value * parsedMsg.signals[i].factor + parsedMsg.signals[i].offset
-    delete parsedMsg.signals[i].offset
-    delete parsedMsg.signals[i].start_bit
-    delete parsedMsg.signals[i].bit_length
-    delete parsedMsg.signals[i].is_big_endian
-    delete parsedMsg.signals[i].is_signed
-    delete parsedMsg.signals[i].factor
-    delete parsedMsg.signals[i].value_min
-    delete parsedMsg.signals[i].value_max
-}
+parsedMsg.signals.forEach(signal => {
+    signal.value = signal.value * signal.factor + signal.offset
+    delete signal.offset
+    delete signal.start_bit
+    delete signal.bit_length
+    delete signal.is_big_endian
+    delete signal.is_signed
+    delete signal.factor
+    delete signal.value_min
+    delete signal.value_max
+})
+
 delete parsedMsg.attributes
 delete parsedMsg.is_extended_frame
 

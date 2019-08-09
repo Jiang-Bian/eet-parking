@@ -23,24 +23,25 @@ const canbc = new CANBC({ canbus: CANBUS, templates: canbcTemplates.messages })
 const canbus = can.createRawChannel(CANBUS, true)
 canbus.addListener("onMessage", msg => {
 
-    let canMsg = JSON.parse(JSON.stringify(canbc.parse(msg)))
-    if (canMsg) return
+    let parsedMsg = JSON.parse(JSON.stringify(canbc.parse(msg)))
+    if (!parsedMsg) return
 
-    for (let i=0; i<canMsg.signals.length; i++) {
-        canMsg.signals[i].value =  canMsg.signals[i].value *  canMsg.signals[i].factor +  canMsg.signals[i].offset
-        delete  canMsg.signals[i].offset
-        delete  canMsg.signals[i].start_bit
-        delete  canMsg.signals[i].bit_length
-        delete  canMsg.signals[i].is_big_endian
-        delete  canMsg.signals[i].is_signed
-        delete  canMsg.signals[i].factor
-        delete  canMsg.signals[i].value_min
-        delete  canMsg.signals[i].value_max
-    }
-    delete canMsg.attributes
-    delete canMsg.is_extended_frame
+    parsedMsg.signals.forEach(signal => {
+        signal.value = signal.value * signal.factor + signal.offset
+        delete signal.offset
+        delete signal.start_bit
+        delete signal.bit_length
+        delete signal.is_big_endian
+        delete signal.is_signed
+        delete signal.factor
+        delete signal.value_min
+        delete signal.value_max
+    })
+    
+    delete parsedMsg.attributes
+    delete parsedMsg.is_extended_frame
 
-    let toClientMsg = JSON.stringify(canMsg)
+    let toClientMsg = JSON.stringify(parsedMsg)
     wss.clients.forEach(client => {
         if (client.readyState === WebSocket.OPEN) {
             client.send(toClientMsg)
