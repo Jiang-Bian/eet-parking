@@ -36,6 +36,11 @@ build/Release
 node_modules/
 jspm_packages/
 
+Release/
+.mk
+.gypi
+Makefile
+
 # TypeScript v1 declaration files
 typings/
 
