@@ -7,11 +7,11 @@ const canbc = new CANBC({ canbus: 0, templates: canbcTemplates.messages })
 let canrawMsg = canbc.convert(canbcMsg)
 console.log('CANRAW DATA:', canrawMsg)
 
-let canbcMsg1 = canbc.parse(canrawMsg)
-let parsedMsg = JSON.parse(JSON.stringify(canbcMsg1))
+let parsedMsg = JSON.parse(JSON.stringify(canbc.parse(canrawMsg)))
 
 for (let i = 0; i < parsedMsg.signals.length; i++) {
     parsedMsg.signals[i].value = parsedMsg.signals[i].value * parsedMsg.signals[i].factor + parsedMsg.signals[i].offset
+    delete parsedMsg.signals[i].offset
     delete parsedMsg.signals[i].start_bit
     delete parsedMsg.signals[i].bit_length
     delete parsedMsg.signals[i].is_big_endian
@@ -20,4 +20,7 @@ for (let i = 0; i < parsedMsg.signals.length; i++) {
     delete parsedMsg.signals[i].value_min
     delete parsedMsg.signals[i].value_max
 }
+delete parsedMsg.attributes
+delete parsedMsg.is_extended_frame
+
 console.log('CANBC MSG:', parsedMsg)

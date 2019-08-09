@@ -22,10 +22,8 @@ wss
 const canbc = new CANBC({ canbus: CANBUS, templates: canbcTemplates.messages })
 const canbus = can.createRawChannel(CANBUS, true)
 canbus.addListener("onMessage", msg => {
-    let canMsg1 = canbc.parse(msg)
-    if (!canMsg1) return
 
-    let canMsg = JSON.parse(JSON.stringify(canMsg1))
+    let canMsg = JSON.parse(JSON.stringify(canbc.parse(msg)))
 
     for (let i=0; i<canMsg.signals.length; i++) {
         canMsg.signals[i].value =  canMsg.signals[i].value *  canMsg.signals[i].factor +  canMsg.signals[i].offset
@@ -40,7 +38,7 @@ canbus.addListener("onMessage", msg => {
     }
     delete canMsg.attributes
     delete canMsg.is_extended_frame
-    
+
     let toClientMsg = JSON.stringify(canMsg)
     wss.clients.forEach(client => {
         if (client.readyState === WebSocket.OPEN) {
