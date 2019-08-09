@@ -404,21 +404,38 @@ const canbcMsg = {
         }]
 }
 
-const wss = new WebSocket.Server({ port: 8848 })
-wss.on('connection', ws => {
-    // ws.on('message', message => {
-    //     console.log(`Received message => ${message}`)
-    // })
-    //ws.send('Hello! Message From Server!!')
-    console.log('accepted a client connection!')
-})
+const wss = new WebSocket.Server({ host: '0.0.0.0', port: 8848 })
+wss
+    .on('connection', ws => {
+        // ws.on('message', message => {
+        //     console.log(`Received message => ${message}`)
+        // })
+        //ws.send('Hello! Message From Server!!')
+        console.log('accepted a client connection:', ws._socket.remoteAddress)
+        ws.on('close', () => {
+            console.log('the client disconnected:', ws._socket.remoteAddress)
+        })
+    })
+
 
 const canbc = new CANBC({ canbus: CANBUS, templates: canbcTemplates.messages })
 const canbus = can.createRawChannel(CANBUS, true)
 canbus.addListener("onMessage", msg => {
+    let canMsg = canbc.parse(msg)
+    for (let i=0; i<canMsg.signals.length; i++) {
+        canMsg.signals[i].value =  canMsg.signals[i].value *  canMsg.signals[i].factor +  canMsg.signals[i].offset
+        delete  canMsg.signals[i].start_bit
+        delete  canMsg.signals[i].bit_length
+        delete  canMsg.signals[i].is_big_endian
+        delete  canMsg.signals[i].is_signed
+        delete  canMsg.signals[i].factor
+        delete  canMsg.signals[i].value_min
+        delete  canMsg.signals[i].value_max
+    }
+    let toClientMsg = JSON.stringify(canMsg)
     wss.clients.forEach(client => {
         if (client.readyState === WebSocket.OPEN) {
-            client.send(JSON.stringify(canbc.parse(msg)));
+            client.send(toClientMsg)
         }
     })
 })
