@@ -22,10 +22,7 @@ const canbc = new CANBC({ canbus: CANBUS, templates: canbcTemplates.messages })
 const canbus = can.createRawChannel(CANBUS, true)
 canbus.addListener("onMessage", msg => {
     let parsedMsg = JSON.parse(JSON.stringify(canbc.parse(msg)))
-
-    delete parsedMsg.attributes
-    delete parsedMsg.is_extended_frame
-    delete parsedMsg.dlc
+    if (!parsedMsg) return
 
     let toClientMsg = JSON.stringify(parsedMsg)
     wss.clients.forEach(client => {

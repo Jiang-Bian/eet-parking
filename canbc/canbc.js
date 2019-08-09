@@ -1,5 +1,5 @@
-//const canbc = require('./build/Release/canbc.node')
-const canbc = require('./build/Debug/canbc.node')
+const canbc = require('./build/Release/canbc.node')
+//const canbc = require('./build/Debug/canbc.node')
 
 module.exports.CANBC = class {
 	constructor(option) {
@@ -28,11 +28,12 @@ module.exports.CANBC = class {
 		let signals = canbc.parse(JSON.stringify(template.signals), JSON.stringify([...message.data]))
 		if (!signals) return null
 
-let canbcMsg = {}
-canbcMsg.id = template.id
-canbcMsg.name = template.name
-canbcMsg.comment =template.comment		
-canbcMsg.signals = JSON.parse(signals)
+		let canbcMsg = {}
+		canbcMsg.id = template.id
+		canbcMsg.name = template.name
+		canbcMsg.comment = template.comment
+		canbcMsg.signals = JSON.parse(signals)
+
 		return canbcMsg
 	}
 
