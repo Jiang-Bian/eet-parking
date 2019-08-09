@@ -1,0 +1,156 @@
+{
+    "attributes": {},
+    "comment": "General object information",
+    "dlc": 8,
+    "id": 1547,
+    "is_extended_frame": false,
+    "name": "Obj_1_General",
+    "signals": [
+        {
+            "attributes": {},
+            "bit_length": 3,
+            "comment": "Object dynamic property",
+            "factor": 1.0,
+            "is_big_endian": true,
+            "is_signed": false,
+            "name": "Obj_DynProp",
+            "offset": 0.0,
+            "start_bit": 48,
+            "value_max": 7.0,
+            "value_min": 0.0,
+            "value": 1,
+            "value_table": [
+                {
+                    "name": "Stopped",
+                    "value": 7
+                },
+                {
+                    "name": "Crossing moving",
+                    "value": 6
+                },
+                {
+                    "name": "Crossing stationary",
+                    "value": 5
+                },
+                {
+                    "name": "Unknown",
+                    "value": 4
+                },
+                {
+                    "name": "Stationary candidate",
+                    "value": 3
+                },
+                {
+                    "name": "Oncoming",
+                    "value": 2
+                },
+                {
+                    "name": "Stationary",
+                    "value": 1
+                },
+                {
+                    "name": "Moving",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "attributes": {},
+            "bit_length": 8,
+            "comment": "Object RCS value (radar cross section)",
+            "factor": 0.5,
+            "is_big_endian": true,
+            "is_signed": false,
+            "name": "Obj_RCS",
+            "offset": -64.0,
+            "start_bit": 56,
+            "value": 145,
+            "value_max": 63.5,
+            "value_min": -64.0,
+            "value_table": []
+        },
+        {
+            "attributes": {
+                "GenSigStartValue": "256"
+            },
+            "bit_length": 9,
+            "comment": "Object relative lateral velocity",
+            "factor": 0.25,
+            "is_big_endian": true,
+            "is_signed": false,
+            "name": "Obj_VrelLat",
+            "offset": -64.0,
+            "start_bit": 53,
+            "value": 256,
+            "value_max": 63.75,
+            "value_min": -64.0,
+            "value_table": []
+        },
+        {
+            "attributes": {},
+            "bit_length": 8,
+            "comment": "Object ID",
+            "factor": 1.0,
+            "is_big_endian": true,
+            "is_signed": false,
+            "name": "Obj_ID",
+            "offset": 0.0,
+            "start_bit": 0,
+            "value": 23,
+            "value_max": 255.0,
+            "value_min": 0.0,
+            "value_table": []
+        },
+        {
+            "attributes": {
+                "GenSigStartValue": "2500"
+            },
+            "bit_length": 13,
+            "comment": "Object longitudinal displacement",
+            "factor": 0.2,
+            "is_big_endian": true,
+            "is_signed": false,
+            "name": "Obj_DistLong",
+            "offset": -500.0,
+            "start_bit": 19,
+            "value": 2647,
+            "value_max": 1138.2,
+            "value_min": -500.0,
+            "value_table": []
+        },
+        {
+            "attributes": {
+                "GenSigStartValue": "512"
+            },
+            "bit_length": 10,
+            "comment": "Object relative longitudinal velocity",
+            "factor": 0.25,
+            "is_big_endian": true,
+            "is_signed": false,
+            "name": "Obj_VrelLong",
+            "offset": -128.0,
+            "start_bit": 46,
+            "value": 512,
+            "value_max": 127.75,
+            "value_min": -128.0,
+            "value_table": []
+        },
+        {
+            "attributes": {
+                "GenSigStartValue": "1023"
+            },
+            "bit_length": 11,
+            "comment": "Object lateral displacement",
+            "factor": 0.2,
+            "is_big_endian": true,
+            "is_signed": false,
+            "name": "Obj_DistLat",
+            "offset": -204.6,
+            "start_bit": 24,
+            "value": 983,
+            "value_max": 204.8,
+            "value_min": -204.6,
+            "value_table": []
+        }
+    ]
+}
