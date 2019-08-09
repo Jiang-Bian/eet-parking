@@ -24,6 +24,7 @@ const canbus = can.createRawChannel(CANBUS, true)
 canbus.addListener("onMessage", msg => {
 
     let canMsg = JSON.parse(JSON.stringify(canbc.parse(msg)))
+    if (canMsg) return
 
     for (let i=0; i<canMsg.signals.length; i++) {
         canMsg.signals[i].value =  canMsg.signals[i].value *  canMsg.signals[i].factor +  canMsg.signals[i].offset
