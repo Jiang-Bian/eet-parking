@@ -1,15 +1,14 @@
 const WebSocket = require('ws')
-const url = 'ws://localhost:8848'
-const connection = new WebSocket(url)
 
-connection.onopen = () => {
-    connection.send('connected to Server!')
-}
-
-connection.onerror = (error) => {
-    console.log(`WebSocket error: ${error}`)
-}
-
-connection.onmessage = (e) => {
-    console.log(e.data)
-}
+const client = new WebSocket('ws://localhost:8848')
+client
+    .on('open', () => {
+        //client.send('Hello from client')
+        console.log('connected to Server!')
+    })
+    .on('error', (error) => {
+        console.log(error)
+    })
+    .on('message', (e) => {
+        console.log(e.data)
+    })

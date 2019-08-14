@@ -91,7 +91,7 @@ struct CANBCSignal_T
 	json toJSON() const
 	{
 		return json({{"name", this->name},
-					 {"value", (float)(this->value * this->factor + this->offset)},
+					 {"value", (float)this->value * this->factor + this->offset},
 					 {"value_name", this->get_value_name()}});
 	}
 
