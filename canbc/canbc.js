@@ -28,10 +28,7 @@ module.exports.CANBC = class {
 		let signals = canbc.parse(JSON.stringify(template.signals), JSON.stringify([...message.data]))
 		if (!signals) return null
 
-		let canbcMsg = {}
-		canbcMsg.id = template.id
-		canbcMsg.name = template.name
-		canbcMsg.comment = template.comment
+		let canbcMsg = { id: template.id, dlc: template.dlc, name: template.name, comment: template.comment }
 		canbcMsg.signals = JSON.parse(signals)
 
 		return canbcMsg

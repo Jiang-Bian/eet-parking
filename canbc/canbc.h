@@ -185,7 +185,6 @@ struct CANBCSignals_T
 		}
 
 		return data;
-		//return json::parse(data.begin(),data.end());
 	}
 
 	json toJSON() const
