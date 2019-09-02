@@ -1,98 +1,121 @@
 let router = require('express').Router()
 
-let configState = {}
+let radarCfgState = {
+    RadarState: [],
+    VersionID: [],
+    FilterState_Header: [],
+    FilterState_Cfg: [],
+    CollDetRegionState:[],
+    CollDetState:[],
+    CollDetRelayCtrl:[]
+}
 
 module.exports.parseConfigState = function (parsedMsg) {
     switch (parsedMsg.id) {
-        case 0x201:
+        case 0x201: // RadarState
             break
 
-        case 0x203: //FilterState_Header to FilterCfg
+        case 0x700: //VersionID
             break
 
-        case 0x204: //Cluster and Object filter configuration state to FilterCfg
+        case 0x203: // FilterState_Header
             break
 
-        case 0x408: //CollDetState, Collision detection state
+        case 0x204: // FilterState_Cfg
+            break
+
+        case 0x402: // CollDetRegionState
+            break
+
+        case 0x408: // CollDetState
+            break
+
+        case 0x8: // CollDetRelayCtrl
             break
     }
     return
 }
 
-router.get('/RadarCfg', (req, res) => {
-    res.send('RadarCfg - CANID: (0x200)')
+router.get('/RadarState', (req, res) => {
+    res.send("global.RadarState")
 })
 
-router.get('/RadarCfg/default', (req, res) => {
-    sendRadarCfg(0x200, radarCfgDeafult)
+router.get('/VersionID', (req, res) => {
+    res.send(global.VersionID)
+})
+
+router.get('/FilterState_Header', (req, res) => {
+    res.send(global.FilterState_Header)
+})
+
+router.get('/FilterState_Cfg', (req, res) => {
+    res.send(global.FilterState_Cfg)
+})
+
+router.get('/CollDetRegionState', (req, res) => {
+    res.send(global.CollDetRegionState)
+})
+
+router.get('/CollDetState', (req, res) => {
+    res.send(global.CollDetState)
+})
+
+router.get('/CollDetRelayCtrl', (req, res) => {
+    res.send(global.CollDetRelayCtrl)
+})
+
+router.post('/RadarCfg/default', (req, res) => {
+    let message = { id: 0x200, dlc: 8, signals: radarCfgDeafult }
+    global.canbus.send(global.canbc.convert(message))
     res.json({ code: '200 Ok' })
 })
 
 router.post('/RadarCfg', (req, res) => {
-    sendRadarCfg(0x200, req.radarCfg)
+    let message = { id: 0x200, dlc: 8, signals: req.radarCfg }
+    global.canbus.send(global.canbc.convert(message))
     res.json({ code: '200 Ok' })
 })
 
 router.post('/FilterCfg', (req, res) => {
-    sendRadarCfg(0x202, req.radarCfg)
+    let message = { id: 0x202, dlc: 8, signals: req.radarCfg }
+    global.canbus.send(global.canbc.convert(message))
     res.json({ code: '200 Ok' })
 })
 
 router.post('/CollDetCfg', (req, res) => {
-    sendRadarCfg(0x400, req.radarCfg)
+    let message = { id: 0x400, dlc: 8, signals: req.radarCfg }
+    global.canbus.send(global.canbc.convert(message))
     res.json({ code: '200 Ok' })
 })
 
 router.post('/CollDetRegCfg', (req, res) => {
-    sendRadarCfg(0x401, req.radarCfg)
+    let message = { id: 0x401, dlc: 8, signals: req.radarCfg }
+    global.canbus.send(global.canbc.convert(message))
     res.json({ code: '200 Ok' })
 })
 
-function sendRadarCfg(id, radarCfg) {
-    let message = global.canbc.getTemplateById(id)
-    for (let key in radarCfg) {
-        message.signals.forEach(signal => {
-            if (signal.name == key) {
-                signal.value = radarCfgDeafult[key]
-            }
-        })
-    }
-
-    global.canbus.send(global.canbc.convert(message))
-    return true
-}
-
-let radarCfgDeafult = {
-    RadarCfg_RCS_Threshold_Valid: 1,
-    RadarCfg_RCS_Threshold: 0,
-
-    RadarCfg_StoreInNVM_valid: 1,
-    RadarCfg_StoreInNVM: 1,
-
-    RadarCfg_SortIndex_valid: 0,
-    RadarCfg_SortIndex: 0,
-
-    RadarCfg_SendExtInfo_valid: 1,
-    RadarCfg_SendExtInfo: 1,
-
-    RadarCfg_CtrlRelay_valid: 0,
-    RadarCfg_CtrlRelay: 0,
-
-    RadarCfg_SendQuality_valid: 1,
-    RadarCfg_SendQuality: 0,
-
-    RadarCfg_MaxDistance_valid: 1,
-    RadarCfg_MaxDistance: 250,
-
-    RadarCfg_RadarPower_valid: 0,
-    RadarCfg_RadarPower: 0,
-
-    RadarCfg_OutputType_valid: 1,
-    RadarCfg_OutputType: 1,
-
-    RadarCfg_SensorID_valid: 0,
-    RadarCfg_SensorID: 0,
-}
-
+let radarCfgDeafult = [
+    { name: 'RadarCfg_RCS_Threshold_Valid', value: 1 },
+    { name: 'RadarCfg_RCS_Threshold_Valid', value: 1 },
+    { name: 'RadarCfg_RCS_Threshold', value: 0 },
+    { name: 'RadarCfg_StoreInNVM_valid', value: 1 },
+    { name: 'RadarCfg_StoreInNVM', value: 1 },
+    { name: 'RadarCfg_SortIndex_valid', value: 0 },
+    { name: 'RadarCfg_SortIndex', value: 0 },
+    { name: 'RadarCfg_SendExtInfo_valid', value: 1 },
+    { name: 'RadarCfg_SendExtInfo', value: 1 },
+    { name: 'RadarCfg_CtrlRelay_valid', value: 0 },
+    { name: 'RadarCfg_CtrlRelay', value: 0 },
+    { name: 'RadarCfg_SendQuality_valid', value: 1 },
+    { name: 'RadarCfg_SendQuality', value: 0 },
+    { name: 'RadarCfg_MaxDistance_valid', value: 1 },
+    { name: 'RadarCfg_MaxDistance', value: 250 },
+    { name: 'RadarCfg_RadarPower_valid', value: 0 },
+    { name: 'RadarCfg_RadarPower', value: 0 },
+    { name: 'RadarCfg_OutputType_valid', value: 1 },
+    { name: 'RadarCfg_OutputType', value: 1 },
+    { name: 'RadarCfg_SensorID_valid', value: 0 },
+    { name: 'RadarCfg_SensorID', value: 0 }
+]
 
 module.exports = router
